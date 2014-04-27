@@ -41,8 +41,8 @@ Total number of rows: 180
 
 >Note: format followed for Table 1 is outlined here:  
  $X; indicates a column name, where X will match the name of the column in the tidy data set    
- : YYY; YYY indicates the data format and any supporting explanations  
- ZZZ,ZZZ,ZZZ, ...; ZZZ show the first 6 of 180 observations  
+ \: YYY; YYY indicates the data format and any supporting explanations  
+ \ZZZ,ZZZ,ZZZ, ...; ZZZ show the first 6 of 180 observations  
  //X - ; is any further explanation of the column in the line below
 </br>
 
