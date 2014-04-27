@@ -8,33 +8,34 @@
   >R Version: R version 3.1.0 (2014-04-10)  
   >Github Repo: https://github.com/JovanSardinha/UCI-HAR-DataPrep  
 
-## Contents
+### Contents
    1 - Assumptions  
    2 - Base Criteria  
    3 - Data Dictionary  
    4 - Variable Dictionary  
    5 - Code Documentation      
 
-## Assumptions
-#### Section outlines the base assumptions made when generating the output (UCI-HAR-TidyDataSet.csv)  
-- <a href= "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"> This link from UCI HAR </a> is active and provides a .zip file named 'getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset'.  
+### Assumptions
+##### Section outlines the base assumptions made when generating the output (UCI-HAR-TidyDataSet.csv)  
+- <a href= "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"> This link from UCI HAR </a> is active and provides a .zip named 'getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset'.  
 - Machine is running R version 3.1.0 or higher.   
 - Machine has internet connectivity to the UCI HAR web page.   
 
-## Base Criteria
-#### Section outlines the base criteria required to generate the output (UCI-HAR-TidyDataSet.csv)  
+### Base Criteria
+##### Section outlines the base criteria required to generate the output (UCI-HAR-TidyDataSet.csv)  
 1. Set the working directory where run_analysis.R is present and also where you expect the raw data files and tidy data set to be downloaded.  
 2. Running the command <code>source("run\_analysis.R")</code> assuming that run_analysis.R is in the working directory. If not, the corresponding path to this file has to be provided in the call.
 
 >Note: Running run_analysis.R will download roughly 399MB of data form the web and create a new directory './data', which will house all the downloaded data in the working directory. Furthermore, the tidy data set (UCI-HAR-TidyDataSet.csv) will be placed in the working directory upon the completion of the run_analysis.R routine. Lastly, the R package "plyr" will be installed automatically upon running this routine.
 
 
-## Data Dictionary
-#### Section explains the columns in the tidy data set (UCI-HAR-TidyDataSet.csv)
+### Data Dictionary
+##### Section explains the columns in the tidy data set (UCI-HAR-TidyDataSet.csv)
 
-> Note: the two output files have identical data.   
-</br>
-Output file format: .csv  and .txt
+> Note: the two output files have identical data, where the first row are column headers.   
+</br>  
+
+Output file format: .csv  and .txt  
 Delimiter: ","  
 Total number of columns: 68  
 Total number of rows: 180  
@@ -46,7 +47,7 @@ Total number of rows: 180
  //X - ; is any further explanation of the column in the line below  
 </br>
 
-### Table 1: Tidy Data Set Data Dictionary
+##### Table 1: Tidy Data Set Data Dictionary
 //activity_label - is associated with the the activity involved. Ranges from 1 to 30  
  $ activity_label             : Factor w/ 6 levels "LAYING","SITTING",..: 1 2 3 4 5 6 1 2 3 4 ...  
 
@@ -124,16 +125,16 @@ Total number of rows: 180
  $ fBodyBodyGyroJerkMag-std() : num  -0.933 -0.987 -0.995 -0.382 -0.392 ...  
 
 
-## Variable Dictionary
+### Variable Dictionary
 
 >Note: format followed for Table 2 is outlined here:  
  "X"; indicates a variable in the R workspace   
  - YYY; YYY indicates the explanation of the variable  
 </br>
 
-### Table 2: R Variable Dictionary
+##### Table 2: R Variable Dictionary
 
-#### 2.1 - Data frames
+###### 2.1 - Data frames
 "activityLabels" - Contains the 6 classes of activity.  
 "features" - Contains a list of all 561 features.         
 "MergedData"  - Data set of testing and training data with the associated activity labels.            
@@ -150,7 +151,7 @@ Total number of rows: 180
 "yTest" - Original testing subjects               
 "yTrain" - Original training subject
 
-#### 2.2 - Other variables  
+###### 2.2 - Other variables  
 "dataDir" - location of the extracted data   
 "file" - location of unzipped data  
 "meanRegEx" - Regular expression to extract only mean() columns  
@@ -159,20 +160,22 @@ Total number of rows: 180
 "testDataDir" - Location of the testing data in ./data/UCI HAR Dataset  
 "trainDataDir" - Location of the training data in ./data/UCI HAR Dataset   
 
-## Code Documentation
-#### Section explains the overall process of <code>source("run\_analysis.R")</code>. 
+### Code Documentation
+##### Section explains the overall process of <code>source("run\_analysis.R")</code>. 
 
->Note: The R file has inline documentation as required. The purpose of this section is to provide high-level guidance. For detailed information, refer to <code>source("run\_analysis.R")</code>. 
+>Note: The R file <code>run\_analysis.R</code>, has inline documentation as required. The purpose of this section is to provide high-level guidance. For detailed information, refer to the source code. 
 </br>
 
   1. Extract data from the UCI HAR and download it in ./data.
-  2. Load the data in the R work space in data.frame for each data set without any modifications. 
-  2. Add test subjects to the testing and training data sets through a column combination.  
-  3. Add activity labels  to the respective testing and training data set through the use of joins.  
-  4. Merges the training and the test sets to create one data set. This will be done through a row merge as both these data sets have identical dimensions.  
-  5. Extracts only the columns which provide information on the mean and standard deviation for each measurement.  
-  6. Creates a independent tidy data set with the average of each column from the previous step grouped by each activity and by each subject.   
-  7. Output a tidy data file in .csv and a copy in .txt
+  2. Load the data in the R work space in a data.frame for each data set without any modifications. 
+  3. Add column labels to both the testing and the training data set.  
+  4. Add test subjects to the testing and training data sets through a column combination.    
+  5. Join activity data with the test subjects form the testing and training data set.  
+  6. Add activity labels  to the respective testing and training data set with the use of joins.  
+  7. Merges the training and the test sets to create one data set. This will be done through a row merge as both these data sets have identical dimensions.  
+  8. Extracts only the columns which provide information on the mean and standard deviation for each measurement.  
+  9. Creates a independent tidy data set with the average of each column from the previous step grouped by each activity and by each subject.   
+  10. Output a tidy data file in .csv and a copy in .txt
 
 
 
