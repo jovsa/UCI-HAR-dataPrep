@@ -20,4 +20,22 @@ The other documents in this repository are:
 **./data** - Folder on your working directory that contains the untouched zipped and unzipped data from UCI.  
 **./UCI-HAR-TidyDataSet.csv** - The final product in .csv format.  
 **./UCI-HAR-TidyDataSet.txt** - The final product in .txt format.  
-**./Rhistory** - Log file detailing the list of actions performed to produce UCI-HAR-TidyDataSet.  
+**./Rhistory** - Log file detailing the list of actions performed to produce UCI-HAR-TidyDataSet. 
+
+### General Statistics
+
+##### CPU Time Measures: 
+ - user: 30.89s  
+ - system: 4.83s  
+ - elapsed 86.58s  
+
+##### File/Folder Sizes: 
+ - **./data** folder: 329MB
+ - UCI-HAR-TidyDataSet.*: 220KB  
+ - Overall folder (after <code>run\_analysis.R</code> execution): 399MB  
+
+### Refrences
+1. <a href= "http://cml.ics.uci.edu/">University of California (UCI) Center for Machine Learning and Intelligent Systems</a>  
+2. <a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones "> UCI Machine Learning Repository</a> 
+3. <a href="https://class.coursera.org/getdata-002"> Coursera: Getting and Cleaning Data</a>
+4. <a href="http://www.biostat.jhsph.edu/~jleek/"> Professor Jeffrey Leek</a> 

@@ -19,7 +19,7 @@
 ##### Section outlines the base assumptions made when generating the output (UCI-HAR-TidyDataSet.csv)  
 - <a href= "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"> This link from UCI HAR </a> is active and provides a .zip named *"getdata-projectfiles-UCI HAR Dataset.zip".  
 - Machine is running R version 3.1.0 or higher.   
-- Machine has internet connectivity to the UCI HAR web page.   
+- Machine has internet connectivity to the <a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones "> UCI Machine Learning Repository</a>.   
 
 ### Base Criteria
 ##### Section outlines the base criteria required to generate the output (UCI-HAR-TidyDataSet.csv)  
@@ -28,11 +28,10 @@
 
 >Note: Running <code>run\_analysis.R</code> will download roughly 399MB of data form the web and create a new directory './data', which will house all the downloaded data in the working directory. Furthermore, the tidy data set (UCI-HAR-TidyDataSet.csv) will be placed in the working directory upon the completion of the run_analysis.R routine. Lastly, the R package "plyr" will be installed automatically upon running this routine.
 
-
 ### Data Dictionary
 ##### Section explains the columns in the tidy data set (UCI-HAR-TidyDataSet.csv)
 
-> Note: the two output files have identical data, where the first row are column headers.   
+> Note: the two output files have identical data, where the first row are column headers.
 </br>  
 
 Output file format: .csv  and .txt  
@@ -44,19 +43,19 @@ Total number of rows: 180
  $X; indicates a column name, where X will match the name of the column in the tidy data set    
  : YYY; YYY indicates the data format and any supporting explanations  
  ZZZ,ZZZ,ZZZ, ...; ZZZ show the first 6 of 180 observations  
- //X - ; is any further explanation of the column in the line below  
+ //X - ; is any further explanation of the column in the line below
 </br>
 
 ##### Table 1: Tidy Data Set Data Dictionary
 //activity_label - is associated with the the activity involved. Ranges from 1 to 30  
  $ activity_label             : Factor w/ 6 levels "LAYING","SITTING",..: 1 2 3 4 5 6 1 2 3 4 ...  
 
-/test_subject - A reference number associated with the 30 test subjects. Ranges from 1 to 30  
+//test_subject - A reference number associated with the 30 test subjects. Ranges from 1 to 30  
  $ test_subject               : int  1 1 1 1 1 1 2 2 2 2 ...  
 
-/ An explanation of the following 66 columns is available in ./data/UCI HAR Dataset/features_info.txt.   
-/ Also note all these 66 columns are averages.  
-/ For further explanation and more context, please refer to  ./data/UCI HAR Dataset/README.txt.  
+// An explanation of the following 66 columns is available in ./data/UCI HAR Dataset/features_info.txt.   
+// Also note all these 66 columns are averages.  
+// For further explanation and more context, please refer to  ./data/UCI HAR Dataset/README.txt.  
  $ tBodyAcc-mean()-X          : num  0.222 0.261 0.279 0.277 0.289 ...  
  $ tBodyAcc-mean()-Y          : num  -0.04051 -0.00131 -0.01614 -0.01738 -0.00992 ...  
  $ tBodyAcc-mean()-Z          : num  -0.113 -0.105 -0.111 -0.111 -0.108 ...  

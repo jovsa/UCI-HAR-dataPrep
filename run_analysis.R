@@ -12,7 +12,6 @@ install.packages("plyr")
 # Libraries
 library(plyr)
 
-
 # Data extraction from UCI HAR and load in ./data
 if(!file.exists("./data")){dir.create("./data")}
 OrigDataURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
