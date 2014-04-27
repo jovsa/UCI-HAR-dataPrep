@@ -53,7 +53,7 @@ colnames(testData)[1] <- "test_subject"
 trainData <- cbind(subjectTrain,XTrain)
 colnames(trainData)[1] <- "test_subject"
 
-###
+## 3
 ###
 #Joining activity data
 ##Test Data
@@ -86,7 +86,7 @@ meanRegEx <- grep(("*.-mean[()].*"),colnames(MergedData))
 stdRegEx <- grep(("*.-std[()].*"),colnames(MergedData))
 MergedDataIndicators<- MergedData[, c(1:3,meanRegEx,stdRegEx)]
 
-#3
+#5
 #Creating the tidy data set
 
 #for debudding
@@ -97,5 +97,8 @@ tidyDataSet <- aggregate(MergedDataIndicators[,3:68], by =list(MergedDataIndicat
 colnames(tidyDataSet)[1] <- "activity_label"
 colnames(tidyDataSet)[2] <- "test_subject"
 
-#for writing out the to
-write.table(tidyDataSet, file ="./tidyDataSet.txt",row.names=FALSE,sep=",")
+#for writing out the tidy data set
+write.table(tidyDataSet, file ="./UCI-HAR-TidyDataSet.csv",row.names=FALSE,sep=",")
+
+# Generating codeBook
+
