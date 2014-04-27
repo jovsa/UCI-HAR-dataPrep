@@ -13,10 +13,11 @@ The goal is to prepare tidy data that can be used for later analysis. This proje
 ### OtherDocuments in the repository 
 **./README.md** - This file, which provides some context to the project.  
 **./CodeBook.md** - A code book that should be referred to when reusing, reproducing or extending any of this work.   
-**./run_analysis.R** - The R routine that extract, cleans and produces UCI-HAR-TidyDataSet.csv.
+**./run_analysis.R** - The R routine that extract, cleans and produces UCI-HAR-TidyDataSet.
 **./gitignore** - list of files and folders to ignore when pushing to this repository. 
 
 ### Outputs
 **./data** - Folder on your working directory that contains the untouched zipped and unzipped data from UCI.
 **./UCI-HAR-TidyDataSet.csv** - The final product in .csv format.
-**./Rhistory** - Log file detailing the list of actions performed to produce UCI-HAR-TidyDataSet.csv.
+**./UCI-HAR-TidyDataSet.txt** - The final product in .txt format.
+**./Rhistory** - Log file detailing the list of actions performed to produce UCI-HAR-TidyDataSet.

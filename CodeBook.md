@@ -17,7 +17,7 @@
 
 ## Assumptions
 #### Section outlines the base assumptions made when generating the output (UCI-HAR-TidyDataSet.csv)  
--  Link: (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) is active and provides a .zip file 'getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset'.  
+- <a href= "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"> This link from UCI HAR </a> is active and provides a .zip file named 'getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset'.  
 - Machine is running R version 3.1.0 or higher.   
 - Machine has internet connectivity to the UCI HAR web page.   
 
@@ -26,13 +26,15 @@
 1. Set the working directory where run_analysis.R is present and also where you expect the raw data files and tidy data set to be downloaded.  
 2. Running the command <code>source("run\_analysis.R")</code> assuming that run_analysis.R is in the working directory. If not, the corresponding path to this file has to be provided in the call.
 
->Note: Running run_analysis.R will download roughly 329MB of data form the web and create a new directory './data', which will house all the downloaded data in the working directory. Furthermore, the tidy data set (UCI-HAR-TidyDataSet.csv) will be placed in the working directory upon the completion of the run_analysis.R routine. Lastly, the R package "plyr" will be installed automatically upon running this routine.
+>Note: Running run_analysis.R will download roughly 399MB of data form the web and create a new directory './data', which will house all the downloaded data in the working directory. Furthermore, the tidy data set (UCI-HAR-TidyDataSet.csv) will be placed in the working directory upon the completion of the run_analysis.R routine. Lastly, the R package "plyr" will be installed automatically upon running this routine.
 
 
 ## Data Dictionary
 #### Section explains the columns in the tidy data set (UCI-HAR-TidyDataSet.csv)
 
-Output file format: .csv  
+> Note: the two output files have identical data.   
+</br>
+Output file format: .csv  and .txt
 Delimiter: ","  
 Total number of columns: 68  
 Total number of rows: 180  
@@ -141,7 +143,7 @@ Total number of rows: 180
 "testActivity" - Contains a list of all the test subjects and the activity they performed.  
 "trainActivity" - Contains a list of all the training subjects and the activity they performed.  
 "testData" - Testing data set with activity.                    
-"tidyDataSet" - Final output also available in .csv in the working directory.                 
+"tidyDataSet" - Final output also available in .csv and .txt in the working directory.                 
 "trainData"- Training data set with activity.          
 "XTest" - Original testing data set               
 "XTrain" - Original training data set               
@@ -163,12 +165,14 @@ Total number of rows: 180
 >Note: The R file has inline documentation as required. The purpose of this section is to provide high-level guidance. For detailed information, refer to <code>source("run\_analysis.R")</code>. 
 </br>
 
-  1. Extract data from the UCI HAR and download it in ./data. 
-  2. Add test subjects to the testing and training data sets.
-  3. Add activity labels  to the respective testing and training data set.
-  4. Merges the training and the test sets to create one data set.
-  5. Extracts only the measurements on the mean and standard deviation for each measurement.
-  6. Creates a independent tidy data set with the average of each column from the previous step by each activity and by each subject.
+  1. Extract data from the UCI HAR and download it in ./data.
+  2. Load the data in the R work space in data.frame for each data set without any modifications. 
+  2. Add test subjects to the testing and training data sets through a column combination.  
+  3. Add activity labels  to the respective testing and training data set through the use of joins.  
+  4. Merges the training and the test sets to create one data set. This will be done through a row merge as both these data sets have identical dimensions.  
+  5. Extracts only the columns which provide information on the mean and standard deviation for each measurement.  
+  6. Creates a independent tidy data set with the average of each column from the previous step grouped by each activity and by each subject.   
+  7. Output a tidy data file in .csv and a copy in .txt
 
 
 

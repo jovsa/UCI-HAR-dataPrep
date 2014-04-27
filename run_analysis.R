@@ -94,7 +94,10 @@ tidyDataSet <- aggregate(MergedDataIndicators[,3:68], by =list(MergedDataIndicat
 colnames(tidyDataSet)[1] <- "activity_label"
 colnames(tidyDataSet)[2] <- "test_subject"
 
-#for writing out the tidy data set
+#for writing out the tidy data set in .csv
 write.table(tidyDataSet, file ="./UCI-HAR-TidyDataSet.csv",row.names=FALSE,sep=",")
+
+#for writing out the tidy data set in .txt
+write.table(tidyDataSet, file ="./UCI-HAR-TidyDataSet.txt",row.names=FALSE,sep=",")
 
 
