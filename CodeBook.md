@@ -1,4 +1,4 @@
-# Code Book: UCI HAR Data Prep
+# Code Book: UCI-HAR-DataPrep
 
   >File Name: CodeBook.md  
   >Written By: Jovan Sardinha  
@@ -17,16 +17,16 @@
 
 ### Assumptions
 ##### Section outlines the base assumptions made when generating the output (UCI-HAR-TidyDataSet.csv)  
-- <a href= "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"> This link from UCI HAR </a> is active and provides a .zip named 'getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset'.  
+- <a href= "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"> This link from UCI HAR </a> is active and provides a .zip named *"getdata-projectfiles-UCI HAR Dataset.zip".  
 - Machine is running R version 3.1.0 or higher.   
 - Machine has internet connectivity to the UCI HAR web page.   
 
 ### Base Criteria
 ##### Section outlines the base criteria required to generate the output (UCI-HAR-TidyDataSet.csv)  
-1. Set the working directory where run_analysis.R is present and also where you expect the raw data files and tidy data set to be downloaded.  
-2. Running the command <code>source("run\_analysis.R")</code> assuming that run_analysis.R is in the working directory. If not, the corresponding path to this file has to be provided in the call.
+1. Set the working directory where <code>run\_analysis.R</code> is present and also where you expect the raw data files and tidy data set to be downloaded.  
+2. Running the command <code>source("run\_analysis.R")</code> assuming that <code>run\_analysis.R</code> is in the working directory. If not, the corresponding path to this file has to be provided in the call.
 
->Note: Running run_analysis.R will download roughly 399MB of data form the web and create a new directory './data', which will house all the downloaded data in the working directory. Furthermore, the tidy data set (UCI-HAR-TidyDataSet.csv) will be placed in the working directory upon the completion of the run_analysis.R routine. Lastly, the R package "plyr" will be installed automatically upon running this routine.
+>Note: Running <code>run\_analysis.R</code> will download roughly 399MB of data form the web and create a new directory './data', which will house all the downloaded data in the working directory. Furthermore, the tidy data set (UCI-HAR-TidyDataSet.csv) will be placed in the working directory upon the completion of the run_analysis.R routine. Lastly, the R package "plyr" will be installed automatically upon running this routine.
 
 
 ### Data Dictionary
@@ -129,7 +129,7 @@ Total number of rows: 180
 
 >Note: format followed for Table 2 is outlined here:  
  "X"; indicates a variable in the R workspace   
- - YYY; YYY indicates the explanation of the variable  
+ - YYY; YYY indicates the explanation of the variable 
 </br>
 
 ##### Table 2: R Variable Dictionary
@@ -175,7 +175,7 @@ Total number of rows: 180
   7. Merges the training and the test sets to create one data set. This will be done through a row merge as both these data sets have identical dimensions.  
   8. Extracts only the columns which provide information on the mean and standard deviation for each measurement.  
   9. Creates a independent tidy data set with the average of each column from the previous step grouped by each activity and by each subject.   
-  10. Output a tidy data file in .csv and a copy in .txt
+  10. Output a tidy data file in .csv and a copy in .txt format.  
 
 
 
