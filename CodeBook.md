@@ -128,7 +128,7 @@ Total number of rows: 180
 
 >Note: format followed for Table 2 is outlined here:  
  "X"; indicates a variable in the R workspace   
- - YYY; YYY indicates the explanation of the variable 
+ \- YYY; YYY indicates the explanation of the variable 
 </br>
 
 ##### Table 2: R Variable Dictionary
