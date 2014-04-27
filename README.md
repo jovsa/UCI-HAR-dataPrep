@@ -38,4 +38,4 @@ The other documents in this repository are:
 1. <a href= "http://cml.ics.uci.edu/">University of California (UCI) Center for Machine Learning and Intelligent Systems</a>  
 2. <a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones "> UCI Machine Learning Repository</a> 
 3. <a href="https://class.coursera.org/getdata-002"> Coursera: Getting and Cleaning Data</a>
-4. <a href="http://www.biostat.jhsph.edu/~jleek/"> Professor Jeffrey Leek</a> 
+4. <a href="http://www.biostat.jhsph.edu/~jleek/"> Professor Jeffrey Leek</a>

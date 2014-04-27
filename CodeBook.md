@@ -42,7 +42,7 @@ Total number of rows: 180
 >Note: format followed for Table 1 is outlined here:  
  $X; indicates a column name, where X will match the name of the column in the tidy data set    
  \: YYY; YYY indicates the data format and any supporting explanations  
- \ZZZ,ZZZ,ZZZ, ...; ZZZ show the first 6 of 180 observations  
+ ZZZ,ZZZ,ZZZ, ...; ZZZ show the first 6 of 180 observations  
  //X - ; is any further explanation of the column in the line below
 </br>
 
@@ -160,7 +160,7 @@ Total number of rows: 180
 "trainDataDir" - Location of the training data in ./data/UCI HAR Dataset   
 
 ### Code Documentation
-##### Section explains the overall process of <code>source("run\_analysis.R")</code>. 
+##### Section explains the overall extraction, cleaning and tidy data set creation process 
 
 >Note: The R file <code>run\_analysis.R</code>, has inline documentation as required. The purpose of this section is to provide high-level guidance. For detailed information, refer to the source code. 
 </br>
