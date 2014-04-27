@@ -13,20 +13,20 @@
    2 - Base Criteria  
    3 - Data Dictionary  
    4 - Variable Dictionary  
-   5 - Code Documentation  
-   6 - References    
+   5 - Code Documentation      
 
 ## Assumptions
 #### Section outlines the base assumptions made when generating the output (UCI-HAR-TidyDataSet.csv)  
 -  Link: (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) is active and provides a .zip file 'getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset'.  
-- Machine is running R version 3.1.0 or higher.  
+- Machine is running R version 3.1.0 or higher.   
+- Machine has internet connectivity to the UCI HAR web page.   
 
 ## Base Criteria
 #### Section outlines the base criteria required to generate the output (UCI-HAR-TidyDataSet.csv)  
 1. Set the working directory where run_analysis.R is present and also where you expect the raw data files and tidy data set to be downloaded.  
 2. Running the command <code>source("run\_analysis.R")</code> assuming that run_analysis.R is in the working directory. If not, the corresponding path to this file has to be provided in the call.
 
->Note: Running run_analysis.R will download roughly 329MB of data form the web and create a new directory './data', which will house all the downloaded data in the working directory. Furthermore, the tidy data set (UCI-HAR-TidyDataSet.csv) will be placed in the working directory upon the completion of the run_analysis.R routine.
+>Note: Running run_analysis.R will download roughly 329MB of data form the web and create a new directory './data', which will house all the downloaded data in the working directory. Furthermore, the tidy data set (UCI-HAR-TidyDataSet.csv) will be placed in the working directory upon the completion of the run_analysis.R routine. Lastly, the R package "plyr" will be installed automatically upon running this routine.
 
 
 ## Data Dictionary
@@ -51,8 +51,9 @@ Total number of rows: 180
 /test_subject - A reference number associated with the 30 test subjects. Ranges from 1 to 30  
  $ test_subject               : int  1 1 1 1 1 1 2 2 2 2 ...  
 
-/ An explanation of the following 66 columns is available in ./data/UCI HAR Dataset/features_info.txt. Also note all these 66 columns are averages. 
-/ For further explanation and more context, please refer to  ./data/UCI HAR Dataset/README.txt
+/ An explanation of the following 66 columns is available in ./data/UCI HAR Dataset/features_info.txt.   
+/ Also note all these 66 columns are averages.  
+/ For further explanation and more context, please refer to  ./data/UCI HAR Dataset/README.txt.  
  $ tBodyAcc-mean()-X          : num  0.222 0.261 0.279 0.277 0.289 ...  
  $ tBodyAcc-mean()-Y          : num  -0.04051 -0.00131 -0.01614 -0.01738 -0.00992 ...  
  $ tBodyAcc-mean()-Z          : num  -0.113 -0.105 -0.111 -0.111 -0.108 ...  
@@ -157,7 +158,20 @@ Total number of rows: 180
 "trainDataDir" - Location of the training data in ./data/UCI HAR Dataset   
 
 ## Code Documentation
-#### Section explains the overall process of <code>source("run\_analysis.R")</code>. The R file has inline documentation as required 
+#### Section explains the overall process of <code>source("run\_analysis.R")</code>. 
+
+>Note: The R file has inline documentation as required. The purpose of this section is to provide high-level guidance. For detailed information, refer to <code>source("run\_analysis.R")</code>. 
+</br>
+
+  1. Extract data from the UCI HAR and download it in ./data. 
+  2. Add test subjects to the testing and training data sets.
+  3. Add activity labels  to the respective testing and training data set.
+  4. Merges the training and the test sets to create one data set.
+  5. Extracts only the measurements on the mean and standard deviation for each measurement.
+  6. Creates a independent tidy data set with the average of each column from the previous step by each activity and by each subject.
+
+
+
 
 
 

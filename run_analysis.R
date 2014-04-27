@@ -97,8 +97,4 @@ colnames(tidyDataSet)[2] <- "test_subject"
 #for writing out the tidy data set
 write.table(tidyDataSet, file ="./UCI-HAR-TidyDataSet.csv",row.names=FALSE,sep=",")
 
-#CodeBook code should be commented for generating tidy data set
-str(tidyDataSet)
-str(workspace)
 
-temp <- NULL
